@@ -152,11 +152,11 @@ protected function definition() {
         $mform->addElement('text', 'defaultgrade', get_string('defaultgrade', 'quiz'),
         array('size' => 3));
         $mform->setType('defaultgrade', PARAM_INT);
-        $mform->setDefault('defaultgrade', 1);
         $mform->addRule('defaultgrade', null, 'required', null, 'client');
+        $mform->setDefault('defaultgrade', 1);
 
         $mform->addElement('text', 'penalty', utf8_encode(get_string('penaltyfactor', 'qtype_simulationceis')),
-                array('size' => 3));
+        array('size' => 3));
         $mform->setType('penalty', PARAM_NUMBER);
         $mform->addRule('penalty', null, 'required', null, 'client');
         //$mform->setHelpButton('penalty', array('penalty', get_string('penalty', 'quiz'), 'quiz'));
@@ -239,11 +239,11 @@ protected function definition() {
 
     public function data_preprocessing($question) {
         $question = parent::data_preprocessing($question);
-        echo '****** data_preprocessing ******';
+        /*echo '****** data_preprocessing ******';
         echo '</br>';print_r($question);echo '</br>';
         echo '****** data_preprocessing ******';
 
-        /*if (!empty($question->options->trueanswer)) {
+        if (!empty($question->options->trueanswer)) {
             $trueanswer = $question->options->answers[$question->options->trueanswer];
             $question->correctanswer = ($trueanswer->fraction != 0);
 

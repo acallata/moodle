@@ -55,7 +55,6 @@ class qtype_simulationceis_renderer extends qtype_renderer {
         require_js($CFG->wwwroot.'/question/type/simulationceis/js/flash_tag.js');
         //require_js($CFG->wwwroot.'/question/type/simulationceis/js/interface.js');
 
-
         $fileHTML = new File($CFG->dirroot.'/question/type/simulationceis/lib/display.html');
         $myArrayMarker = new ArrayMarker();
         $Template = $fileHTML->read();
@@ -71,8 +70,9 @@ class qtype_simulationceis_renderer extends qtype_renderer {
         $markers['###WIDTH###'] = $width;
         $markers['###HEIGHT###'] = $height;
         
-        $result .= $myArrayMarker->substituteMarkerArray($arrayContenido['DISPLAY'], $markers);
-
+        $result = $myArrayMarker->substituteMarkerArray($arrayContenido['DISPLAY'], $markers);
+        
+		//require_once($CFG->dirroot . '/question/type/edit_question_form.php');
         return $result;
     }
 
@@ -114,33 +114,4 @@ class qtype_simulationceis_renderer extends qtype_renderer {
             return get_string('correctanswerfalse', 'qtype_simulationceis');
         }*/
     }
-    /*
-    public function formulation_and_controls(question_attempt $qa,
-            question_display_options $options) {
-
-        $question = $qa->get_question();
-
-        $questiontext = '';
-        foreach ($question->textfragments as $i => $fragment) {
-            if ($i > 0) {
-                $questiontext .= $this->embedded_element($qa, $i, $options);
-            }
-            $questiontext .= $fragment;
-        }
-
-        $result = '';
-        $result .= html_writer::tag('div', $question->format_text($questiontext,
-                $question->questiontextformat, $qa, 'question', 'questiontext', $question->id),
-                array('class' => $this->qtext_classname(), 'id' => $this->qtext_id($qa)));
-
-        $result .= $this->post_qtext_elements($qa, $options);
-
-        if ($qa->get_state() == question_state::$invalid) {
-            $result .= html_writer::nonempty_tag('div',
-                    $question->get_validation_error($qa->get_last_qt_data()),
-                    array('class' => 'validationerror'));
-        }
-
-        return $result;
-    }*/
 }

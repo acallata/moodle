@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'qtype_simulationceis';
-$plugin->version   = 20120322469;
+$plugin->version   = 20120322479;
 
 $plugin->requires  = 2011102700;
 

@@ -50,9 +50,8 @@ class qtype_simulationceis_question extends question_graded_automatically {
         $var2 = array('answer' => PARAM_INTEGER);
     	//print_r($var);
 		//print_r($var2);
-
-        //global $CFG;
-		//require_js($CFG->wwwroot.'/question/type/simulationceis/js/interface.js');
+		global $CFG;
+		require_js($CFG->wwwroot.'/question/type/simulationceis/js/interface.js');
         return array('answer' => (int) $this->rightanswer);
         /*
         $response = array();

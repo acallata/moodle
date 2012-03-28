@@ -3,14 +3,12 @@
  * for LMS Moodle.
  *
  * @author Pupinin Dmitry, Russia, Novosibirsk, 2009
- * @update Alvaro Callata, Chile, Temuco, 2012
  * @license http://www.gnu.org/copyleft/gpl.html GNU Public License
  * @package questionbank
  * @subpackage questiontypes
  ***************************************************/
 
 function getEl(id){
-	alert('getEl');
 	if(document.layers){
 		return document.layers[id];
 	}
@@ -23,7 +21,6 @@ function getEl(id){
 }
 
 function flashToJSComm(item) {
-	alert('flashToJSComm');
 	var obj = getEl("idresp"+item.id+"_grade");
 	obj.value = item.grade;
 	
@@ -32,12 +29,10 @@ function flashToJSComm(item) {
 	
 	obj = getEl("idresp"+item.id+"_");
 	obj.value = item.description;
-	//
+	alert("===>   "+item.grade+" "+item.flashdata+" "+item.description);
 }
 
 function CpToJSComm(qid, cmd, lng) {
-	//alert(item.grade);
-	alert('CpToJSComm');
 	var res = cmd.match(/#Score:(\d+)\D+(\d+)?/);
 	var item = new Object;
 	if (res[1] != null) {

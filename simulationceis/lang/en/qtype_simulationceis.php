@@ -23,7 +23,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Flash Mineduc-Chile';
+$string['pluginname'] = 'Flash QTYPE';
 $string['pluginname_help'] = 'In response to a question (that may include a image) the respondent types a word or short phrase. There may be several possible correct answers, each with a different grade. If the "Case sensitive" option is selected, then you can have different scores for "Word" or "word".';
 $string['pluginname_link'] = 'question/type/simulationceis';
 $string['pluginnameadding'] = 'Adding a Flash Simulation';
@@ -35,11 +35,10 @@ $string['flash'] = 'Flash-movie';
 $string['flashmovie'] = 'Debe elegir un elemento Flash';
 $string['noflashmovie'] = 'No se encontro ningun elemento Flash';
 $string['flashwarning'] = 'Tenga en cuenta que aqu� no se puede elegir cualquier flash-movie, pero si uno que se integre con Moodle.!';
-$string['editingflash'] = 'Editing \"Flash-вопроса\"';
+$string['editingflash'] = 'Editing \"Flash"';
 $string['description'] = 'Description about working with flash-movie';
 $string['flashwidth'] = 'Ancho movie';
 $string['flashheight'] = 'Alto movie';
 $string['optionalfile'] = 'Additional file';
 $string['optionaldata'] = 'Additional data';
-$string['nooptionalfiles'] = 'Files didn\'t find (searching file only in directory FlashQuestions).';
 $string['penaltyfactor'] = 'Factor de penalizaci�n.';
